@@ -1,7 +1,7 @@
-import './App.css'
+import '../App/App.css'
 
-import Header from './Header'
-import Content from './Content'
+import Header from '../Header/Header.jsx'
+import Content from '../Content/Content.jsx'
 
 function App() {
 
