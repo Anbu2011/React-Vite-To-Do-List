@@ -5,25 +5,20 @@ import './Tasks_save.css'
 
 const Content = () => {
   const [inputValue, setInputValue] = useState('');
-  const [items, setItems] = useState([]);
+  // const [items, setItems] = useState([]);
+
+  const [items, setItems] = useState(() => {
+    const savedItems = localStorage.getItem('tasks');
+    return savedItems ? JSON.parse(savedItems) : [];
+  });
 
   const [editingIndex, setEditingIndex] = useState(-1);
   const [editingValue, setEditingValue] = useState('');
-  // const inputRef = useRef(null);
   
-  // load
-  useEffect(()  => {
-    const data = localStorage.getItem('tasks')
-    if(data){
-      setItems(JSON.parse(data));
-    }
-  }, []);
-
-
   // store
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(items));
-  });
+  }, [items]);
 
 
   const handleInputChange = (event) => {
@@ -36,10 +31,14 @@ const Content = () => {
       event.preventDefault();
     }
 
+    if (inputValue === null || inputValue.trim() === ''){
+      alert('Add a Task');
+      return;
+    }
+
     if (inputValue.trim() !== ''){
         setItems([...items, inputValue]);
         setInputValue('');
-        // inputRef.current.focus();     ref={inputRef} // to be put in input field
     }
   };
 
@@ -66,13 +65,6 @@ const Content = () => {
     const newItems = items.filter((_, i) => i !== index);
     setItems(newItems);
   };
-
-
-  // const handleKeyDown = (event) => {
-  //   if (event.key === 'Enter'){
-  //     handleAddTask(event);
-  //   }
-  // };      onKeyDown={handleKeyDown}
 
   return (
     <div>
