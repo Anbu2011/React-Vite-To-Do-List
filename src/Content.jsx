@@ -10,7 +10,8 @@ const Content = () => {
   const [editingIndex, setEditingIndex] = useState(-1);
   const [editingValue, setEditingValue] = useState('');
   // const inputRef = useRef(null);
-
+  
+  // load
   useEffect(()  => {
     const data = localStorage.getItem('tasks')
     if(data){
@@ -18,6 +19,8 @@ const Content = () => {
     }
   }, []);
 
+
+  // store
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(items));
   });
