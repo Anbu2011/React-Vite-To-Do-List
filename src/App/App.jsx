@@ -1,6 +1,7 @@
 import './App.css'
 import Header from '../Components/Header/Header.jsx'
-import Content from '../Components/Content/Content.jsx'
+import ToDo from '../Components/ToDo/ToDo.jsx'
+
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
     <div className='App'>
       <Header />
 
-      <Content /> 
+      <ToDo />
     </div>
   );
 }

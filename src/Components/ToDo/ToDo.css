@@ -1,0 +1,168 @@
+/* Form and H2 */
+form{
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head2{
+    font-size: 1rem;
+    color: black;
+    margin: 30px;
+}
+
+input[type="text"]{
+    background: transparent;
+    box-sizing: border-box;
+    width: 500px;
+    height: 50px;
+    border-radius: 20px 0 0 20px;
+    border: 0.8px solid black;
+    outline: none;
+    font-size: 25px;
+    padding: 0 25px;
+}
+
+button[type='submit']{
+    /* background: #3494E6;  
+    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+    background: linear-gradient(to right, #EC6EAD, #3494E6); */
+
+    background-color: gray;
+    width: 80px;
+    height: 50px;
+    border-radius: 0 20px 20px 0;
+
+    border: 0.5px solid black;
+    outline-width: 1.2px;
+
+    text-align: center;
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: 525;
+    
+    cursor: pointer;
+}
+
+button[type='submit']:hover{
+    background: lightgray;
+    opacity: 0.8;
+}
+
+button[type='submit']:active{
+    background: white;
+    opacity: 0.8;
+}
+
+
+/* Tasks Edit and Delete */
+.all_tasks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task_display2{
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 650px;
+    height: 40px;
+    background: white;
+    padding: 0 10px;
+}
+
+.display_items2{
+
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    width: 75%;
+    background: transparent;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+.task_btn{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 550;
+}
+
+.btns2{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 25%;
+}
+
+#edit:hover{
+    opacity: 0.8;
+    background-image: linear-gradient(to right, rgb(252, 18, 162), rgb(255, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#delete:hover{
+    opacity: 0.8;
+    background-image: linear-gradient(to right, rgb(252, 18, 162), rgb(255, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#edit:active{
+    opacity: 0.2;
+}
+#delete:active{
+    opacity: 0.2;
+}
+
+
+/* Tasks save */
+.task_display1{
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 650px;
+    height: 40px;
+    background: floralwhite;
+    padding: 0 10px;
+}
+
+input[type="text1"]{
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    width: 75%;
+    background: transparent;
+    padding: 1px 0 3px 10px;
+    color:indianred;
+    border: none;
+    outline: none;
+}
+
+.btns1{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#save:hover{
+    opacity: 0.8;
+    background-image: linear-gradient(to right, rgb(252, 18, 162), rgb(255, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#save:active{
+    opacity: 0.2;
+}

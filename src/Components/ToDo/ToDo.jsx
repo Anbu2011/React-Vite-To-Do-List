@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import './Form_h2.css'
-import './Tasks_edit.css'
-import './Tasks_save.css'
+import './ToDo.css'
 
-const Content = () => {
+const ToDo = () => {
   const [inputValue, setInputValue] = useState('');
   // const [items, setItems] = useState([]);
 
@@ -119,4 +117,4 @@ const Content = () => {
 
 };
 
-export default Content;
+export default ToDo;
